@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion SDK_VERSION
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        applicationId "ru.noties.sbv.sample"
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile project(':library')
+    compile 'ru.noties:debug:2.0.2@jar'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'ru.noties:ccf:1.0.0'
+}
